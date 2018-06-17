@@ -1,8 +1,8 @@
-describe 'Generate Form data for online registration forms' do
+RSpec.describe 'Generate Form data for online registration forms' do
 
   before(:all) do
     class Dummy
-      include GeneratorSuper
+      include SykGenData
     end
     @gen = Dummy.new
   end

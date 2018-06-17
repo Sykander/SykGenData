@@ -36,27 +36,15 @@ form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
 ```
+form.get_country      # returns a country
 form.get_first_name   # returns a first name
 form.get_last_name    # returns a last name
 form.get_username     # returns a dbz inspired username
+form.get_email        # returns a random email
 form.get_password     # returns a string with upper and lower case as well as special characters and numbers
 form.get_dob          # returns a date of birth as an array of 3 values
 form.get_phone_number # returns a phone number starting 07
-```
---------
-```
-city
-```
-to call GenCityData class used to generate city ids, names and coordinates for use with an API.
-```
-city.get_random_city_id           # returns a random city id
-id = city.get_random_city_id
-city.get_city_name_by_id id       # returns a city name by that city's id
-city.get_city_names               # returns an array of city names
-city.get_random_city_name         # returns a random city name
-name = city.get_random_city_name
-city.get_city_id_by_name name     # returns a city id by that city's name
-city.get_city_coord_by_id id      # returns an array of longitude and latitude for a city by that city's id
+form.get_about_me     # returns a quote for an about me section
 ```
 --------
 ```

@@ -8,3 +8,4 @@ gemspec
 gem 'httparty'
 gem 'json'
 gem 'faker'
+gem 'rake'

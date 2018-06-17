@@ -1,8 +1,8 @@
-describe 'Generate Postcode data' do
+RSpec.describe 'Generate Postcode data' do
 
   before(:all) do
     class Dummy
-      include GeneratorSuper
+      include SykGenData
     end
     @gen = Dummy.new
   end
