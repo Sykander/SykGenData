@@ -61,7 +61,7 @@ RSpec.describe 'Generate Form data for online registration forms' do
     expect(@gen.form.get_numeric_string.scan(/\D/).empty?).to be true
   end
 
-  it "should return a random fake email" do
+  it "should get a random fake email" do
     expect(@gen.form.get_email).to be_a String
     expect(@gen.form.get_email.include? '@').to be true
   end
