@@ -11,6 +11,10 @@ RSpec.describe 'Generate Form data for online registration forms' do
     expect(@gen.form.get_country).to be_a String
   end
 
+  it "should get a random fake location" do
+    expect(@gen.form.get_fake_location).to be_a String
+  end
+
   it "should get a random first name" do
     expect(@gen.form.get_first_name).to be_a String
   end
@@ -20,8 +24,8 @@ RSpec.describe 'Generate Form data for online registration forms' do
   end
 
   it "should get a random Date of Birth as an array of three integers" do
-    expect(@gen.form.get_dob).to be_kind_of Array
-    expect(@gen.form.get_dob.sample).to be_an Integer
+    expect(@gen.form.get_dob 0, 64).to be_kind_of Array
+    expect(@gen.form.get_dob(0, 64).sample).to be_an Integer
   end
 
   it "should get a random marital status" do
