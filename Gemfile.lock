@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    SykGenData (0.0.3)
-      faker
-      httparty
-      json
+    SykGenData (0.1.2)
+      faker (~> 1.8)
+      httparty (~> 0.16)
+      json (~> 2.1)
 
 GEM
   remote: https://rubygems.org/

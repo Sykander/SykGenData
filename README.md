@@ -67,9 +67,8 @@ postcode.get_postcode   # returns a random UK postcode
 ## Testing
 
 The generators are all tested using rspec, you can run the tests from the project root directory by running the command
-```
-    $ rspec
-```
+
+    $ rake spec
 
 
 ## Development
