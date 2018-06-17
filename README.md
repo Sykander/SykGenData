@@ -1,8 +1,6 @@
 # SykGenData
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/SykGenData`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This project was made to be a library resource for generating data.
 
 ## Installation
 
@@ -20,27 +18,19 @@ Or install it yourself as:
 
     $ gem install SykGenData
 
-# Generators
-
-This project was made to be a library resource for generating data.
-
 ## Using the generators
 
-1. Clone down the repo and merge this lib folder with your own
-
-2. Add the following gems to your gemfile
+Use the generators by first adding
 ```
-gem 'yaml'
-gem 'json'
-gem 'faker'
-gem 'httparty'
-gem 'rspec'
+require 'SykGenData'
 ```
-or install them individually.
+to your ruby file and then adding
+```
+include 'SykGenData'
+```
+to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
 
-3. Use the generators by requiring the generator_super ruby and and including the GeneratorSuper module into your class
-
-4. Inside your class use
+## Methods
 ```
 form
 ```
