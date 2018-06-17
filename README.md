@@ -30,6 +30,18 @@ include 'SykGenData'
 ```
 to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
 
+Eg.
+```
+class DummyClass
+  include SykGenData
+end
+
+Foo = Dummy.new
+Foo.form.get_username
+  ~"Videl257"
+
+```
+
 ## Methods
 ```
 form
