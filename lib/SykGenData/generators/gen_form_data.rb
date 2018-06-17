@@ -80,7 +80,7 @@ class GenFormData
   end
 
   def get_about_me
-    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraphs(Random.new.rand(0..5)), RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote, HitchhikersGuideToTheGalaxy.marvin_quote]
+    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraph, RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote, HitchhikersGuideToTheGalaxy.marvin_quote]
     quotes.sample
   end
 
