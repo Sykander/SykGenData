@@ -4,7 +4,7 @@ This project was to make a ruby gem which came with a library of useful data gen
 
 These generators could be added to later as I find the need for different types of data. Making these generators into a gem means that I can easily include and use my generators in new projects without much hassle of copying files, making require statements etc.
 
-The generators themselves come in a SOM model with a super module handing out appropriate generator services. 
+The generators themselves come in a SOM model with a super module handing out appropriate generator services.
 
 ## Installation
 
@@ -50,15 +50,16 @@ form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
 ```ruby
-form.get_country      # returns a country
-form.get_first_name   # returns a first name
-form.get_last_name    # returns a last name
-form.get_username     # returns a dbz inspired username
-form.get_email        # returns a random email
-form.get_password     # returns a string with upper and lower case as well as special characters and numbers
-form.get_dob          # returns a date of birth as an array of 3 values
-form.get_phone_number # returns a phone number starting 07
-form.get_about_me     # returns a quote for an about me section
+form.get_country        # returns a country
+form.get_fake_location  # returns a fake location
+form.get_first_name     # returns a first name
+form.get_last_name      # returns a last name
+form.get_username       # returns a dbz inspired username
+form.get_email          # returns a random email
+form.get_password       # returns a string with upper and lower case as well as special characters and numbers
+form.get_dob            # returns a date of birth as an array of 3 values
+form.get_phone_number   # returns a phone number starting 07
+form.get_about_me       # returns a quote for an about me section
 ```
 --------
 ```ruby
