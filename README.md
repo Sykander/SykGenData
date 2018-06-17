@@ -1,6 +1,10 @@
 # SykGenData
 
-This project was made to be a library resource for generating data.
+This project was to make a ruby gem which came with a library of useful data generators.
+
+These generators could be added to later as I find the need for different types of data. Making these generators into a gem means that I can easily include and use my generators in new projects without much hassle of copying files, making require statements etc.
+
+The generators themselves come in a SOM model with a super module handing out appropriate generator services. 
 
 ## Installation
 
@@ -21,21 +25,31 @@ Or install it yourself as:
 ## Using the generators
 
 Use the generators by first adding
-```
+```ruby
 require 'SykGenData'
 ```
 to your ruby file and then adding
-```
-include 'SykGenData'
+```ruby
+include SykGenData
 ```
 to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
 
-## Methods
+Eg.
+```ruby
+class DummyClass
+  include SykGenData
+end
+
+Foo = Dummy.new
+Foo.form.get_username
 ```
+
+## Methods
+```ruby
 form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
-```
+```ruby
 form.get_country      # returns a country
 form.get_first_name   # returns a first name
 form.get_last_name    # returns a last name
@@ -47,23 +61,18 @@ form.get_phone_number # returns a phone number starting 07
 form.get_about_me     # returns a quote for an about me section
 ```
 --------
-```
+```ruby
 postcode
 ```
 to call GenPostcodeData class used to generate UK postcodes for use with an API.
-```
+```ruby
 postcode.get_postcode   # returns a random UK postcode
 ```
 ## Testing
 
-The generators are all tested using rspec, you can run the tests for yourself by going to
-```
-lib/SykGenData/generators
-```
-from the project root directory and running the command
-```
-rspec
-```
+The generators are all tested using rspec, you can run the tests from the project root directory by running the command
+
+    $ rake spec
 
 
 ## Development
