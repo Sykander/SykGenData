@@ -52,15 +52,16 @@ form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
 ```ruby
-form.get_country      # returns a country
-form.get_first_name   # returns a first name
-form.get_last_name    # returns a last name
-form.get_username     # returns a username
-form.get_email        # returns a random email
-form.get_password     # returns a string with upper and lower case as well as special characters and numbers
-form.get_dob          # returns a date of birth as an array of 3 values
-form.get_phone_number # returns a phone number starting 07
-form.get_about_me     # returns a quote for an about me section
+form.get_country        # returns a country
+form.get_fake_location  # returns a fictional location
+form.get_first_name     # returns a first name
+form.get_last_name      # returns a last name
+form.get_username       # returns a username
+form.get_email          # returns a random email
+form.get_password       # returns a string with upper and lower case as well as special characters and numbers
+form.get_dob            # returns a date of birth as an array of 3 values
+form.get_phone_number   # returns a phone number starting 07
+form.get_about_me       # returns a quote for an about me section
 ```
 --------
 ```ruby
