@@ -11,6 +11,10 @@ RSpec.describe 'Generate Form data for online registration forms' do
     expect(@gen.form.get_country).to be_a String
   end
 
+  it "should get a random fake location" do
+    expect(@gen.form.get_fake_location).to be_a String
+  end
+
   it "should get a random first name" do
     expect(@gen.form.get_first_name).to be_a String
   end
