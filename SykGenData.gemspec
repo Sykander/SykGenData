@@ -35,19 +35,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-
-  # files
-  spec.files       = ["./lib/SykGenData.rb"]
-  spec.files       = ['./lib/SykGenData/generator_super.rb']
-  spec.files       = ['./lib/SykGenData/generators/gen_city_data.rb']
-  spec.files       = ['./lib/SykGenData/generators/gen_form_data.rb']
-  spec.files       = ['./lib/SykGenData/generators/gen_postcode_data.rb']
-  spec.files       = ['./lib/SykGenData/generators/.rspec']
-  spec.files       = ['./lib/SykGenData/generators/spec/gen_city_data_spec.rb']
-  spec.files       = ['./lib/SykGenData/generators/spec/gen_data_data_spec.rb']
-  spec.files       = ['./lib/SykGenData/generators/spec/gen_postcode_data_spec.rb']
-  spec.files       = ['./lib/SykGenData/generators/spec/spec_helper.rb']
-  spec.files       = ['./lib/SykGenData/generators/spec/generator_super_spec.rb']
-  spec.files       = ['./lib/SykGenData/generators/resources/city_id.yml']
-  spec.files       = ['./lib/SykGenData/generators/resources/city.list.json']
 end
