@@ -10,7 +10,7 @@ class GenFormData
   end
 
   def get_fake_location
-    location = [RickAndMorty.location, Simpsons.location, StarTrek.location, StarWars.planet]
+    location = [RickAndMorty.location, Simpsons.location, StarTrek.location, StarWars.planet, Zelda.location, Witcher.location, Lovecraft.location, HarryPotter.location]
 
     location.sample
   end
@@ -58,7 +58,7 @@ class GenFormData
   end
 
   def get_username
-    characters = [Ancient.god, Ancient.primordial, Ancient.titan, Ancient.hero DragonBall.character, Artist.name, BackToTheFuture.character, Book.genre, DrWho.character, DrWho.villian, DrWho.specie, HarryPotter.character, LordOfTheRings.character, Lovecraft.deity, Myst.character, RickAndMorty.character, Seinfeld.character, Simpsons.character, StarTrek.character, StarTrek.villain, StarWars.character, TheFreshPrinceOfBelAir.character]
+    characters = [Ancient.god, Ancient.primordial, Ancient.titan, Ancient.hero, DragonBall.character, Artist.name, BackToTheFuture.character, Book.genre, DrWho.character, DrWho.villian, DrWho.specie, HarryPotter.character, LordOfTheRings.character, Lovecraft.deity, RickAndMorty.character, Seinfeld.character, Simpsons.character, StarTrek.character, StarTrek.villain, StarWars.character, TheFreshPrinceOfBelAir.character, Superhero.descriptor]
 
     username = characters.sample
     username += Random.new.rand(0..9).to_s
@@ -80,7 +80,7 @@ class GenFormData
   end
 
   def get_about_me
-    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraph_by_chars(Random.new.rand(0..255)), Myst.quote, RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote]
+    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraphs(Random.new.rand(0..5)), RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote]
     quotes.sample
   end
 
