@@ -10,7 +10,7 @@ class GenFormData
   end
 
   def get_fake_location
-    location = [RickAndMorty.location, Simpsons.location, StarTrek.location, StarWars.planet, Zelda.location, Witcher.location, Lovecraft.location, HarryPotter.location]
+    location = [RickAndMorty.location, Simpsons.location, StarTrek.location, StarWars.planet, Zelda.location, Witcher.location, Lovecraft.location, HarryPotter.location, HitchhikersGuideToTheGalaxy.location, HitchhikersGuideToTheGalaxy.planet, HitchhikersGuideToTheGalaxy.starship]
 
     location.sample
   end
@@ -80,7 +80,7 @@ class GenFormData
   end
 
   def get_about_me
-    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraphs(Random.new.rand(0..5)), RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote]
+    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraphs(Random.new.rand(0..5)), RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote, HitchhikersGuideToTheGalaxy.marvin_quote]
     quotes.sample
   end
 
