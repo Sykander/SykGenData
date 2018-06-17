@@ -36,12 +36,14 @@ to your Generator Super class if you have one or to any class you'd like to gene
 
 Eg.
 ```ruby
-class DummyClass
+require 'SykGenData'
+...
+class Dummy
   include SykGenData
 end
-
-Foo = Dummy.new
-Foo.form.get_username
+...
+dummy = Dummy.new
+dummy.form.get_username
 ```
 
 ## Methods
