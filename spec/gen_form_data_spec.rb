@@ -20,7 +20,7 @@ RSpec.describe 'Generate Form data for online registration forms' do
   end
 
   it "should get a random Date of Birth as an array of three integers" do
-    expect(@gen.form.get_dob).to be_kind_of Array
+    expect(@gen.form.get_dob 0, 64).to be_kind_of Array
     expect(@gen.form.get_dob.sample).to be_an Integer
   end
 
