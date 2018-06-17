@@ -21,33 +21,31 @@ Or install it yourself as:
 ## Using the generators
 
 Use the generators by first adding
-```
+```ruby
 require 'SykGenData'
 ```
 to your ruby file and then adding
-```
+```ruby
 include 'SykGenData'
 ```
 to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
 
 Eg.
-```
+```ruby
 class DummyClass
   include SykGenData
 end
 
 Foo = Dummy.new
 Foo.form.get_username
-  ~"Videl257"
-
 ```
 
 ## Methods
-```
+```ruby
 form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
-```
+```ruby
 form.get_country      # returns a country
 form.get_first_name   # returns a first name
 form.get_last_name    # returns a last name
@@ -59,22 +57,18 @@ form.get_phone_number # returns a phone number starting 07
 form.get_about_me     # returns a quote for an about me section
 ```
 --------
-```
+```ruby
 postcode
 ```
 to call GenPostcodeData class used to generate UK postcodes for use with an API.
-```
+```ruby
 postcode.get_postcode   # returns a random UK postcode
 ```
 ## Testing
 
-The generators are all tested using rspec, you can run the tests for yourself by going to
+The generators are all tested using rspec, you can run the tests from the project root directory by running the command
 ```
-lib/SykGenData/generators
-```
-from the project root directory and running the command
-```
-rspec
+    $ rspec
 ```
 
 
