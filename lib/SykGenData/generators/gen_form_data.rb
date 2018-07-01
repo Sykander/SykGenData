@@ -27,6 +27,22 @@ class GenFormData
     Date.birthday(min_years_old, max_years_old).to_s.split('-').map {|x| x.to_i}
   end
 
+  def get_visa_cc_number
+    cc_number = '4917 3000 0000 '
+    while cc_number.length <= 16
+      cc_number += rand(0..9).to_s
+    end
+    cc_number
+  end
+
+  def get_visa_sec_code
+    sec_code = ''
+    while sec_code.length <= 3
+      sec_code += rand(0..9).to_s
+    end
+    sec_code
+  end
+
   def get_marital_status
     case Random.new.rand(0..2)
     when 0
