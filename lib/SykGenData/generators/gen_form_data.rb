@@ -28,8 +28,8 @@ class GenFormData
   end
 
   def get_visa_cc_number
-    cc_number = '4917 3000 0000 '
-    while cc_number.length < 19
+    cc_number = '4'
+    while cc_number.length < 16
       cc_number += rand(0..9).to_s
     end
     cc_number

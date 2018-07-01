@@ -28,16 +28,6 @@ RSpec.describe 'Generate Form data for online registration forms' do
     expect(@gen.form.get_dob(0, 64).sample).to be_an Integer
   end
 
-  it "should return a random fake VISA cc number" do
-    expect(@gen.form.get_visa_cc_number).to be_a String
-    expect(@gen.form.get_visa_cc_number.length).to eq 19
-  end
-
-  it "should return a random fake VISA security code" do
-    expect(@gen.form.get_visa_sec_code).to be_a String
-    expect(@gen.form.get_visa_sec_code.length).to eq 3
-  end
-
   it "should get a random marital status" do
     expect(@gen.form.get_marital_status).to be_a String
   end
