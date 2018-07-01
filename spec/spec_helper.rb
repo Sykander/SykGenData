@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "SykGenData"
+require_relative "../lib/SykGenData"
 
 RSpec.configure do |config|
 

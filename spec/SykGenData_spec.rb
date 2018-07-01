@@ -18,4 +18,8 @@ RSpec.describe SykGenData do
   it "should give a class instance for postcode data" do
     expect(@gen.postcode.class).to eq GenPostcodeData
   end
+
+  it "should give a class instance of cc data" do
+    expect(@gen.cc.class).to eq GenCCData
+  end
 end
