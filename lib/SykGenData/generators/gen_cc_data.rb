@@ -30,4 +30,18 @@ class GenCCData
     sec_code
   end
 
+  def get_mastercard_cc_number
+    cc_mastercard_numbers = File.read(Gem.loaded_specs["SykGenData"].gem_dir + '/lib/SykGenData/resources/cc_mastercard_numbers.json')
+    cc_mastercard_hash = JSON.parse(cc_mastercard_numbers)
+    cc_number = cc_mastercard_hash.sample['CreditCard']["CardNumber"].to_s
+  end
+
+  def get_mastercard_sec_code
+    sec_code = ''
+    while sec_code.length < 3
+      sec_code += rand(0..9).to_s
+    end
+    sec_code
+  end
+
 end

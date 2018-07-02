@@ -28,13 +28,13 @@ RSpec.describe "Generate CC data for testing online payment forms" do
   end
 
   it "should return a mastercard cc number" do
-    expect(@gen.cc.get_amex_cc_number).to be_a String
-    expect(@gen.cc.get_amex_cc_number.length).to eq 16
+    expect(@gen.cc.get_mastercard_cc_number).to be_a String
+    expect(@gen.cc.get_mastercard_cc_number.length).to eq 16
   end
 
   it "should return a mastercard security code" do
-    expect(@gen.cc.get_amex_sec_code).to be_a String
-    expect(@gen.cc.get_amex_sec_code.length).to eq 3
+    expect(@gen.cc.get_mastercard_sec_code).to be_a String
+    expect(@gen.cc.get_mastercard_sec_code.length).to eq 3
   end
 
 end
