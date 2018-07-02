@@ -61,6 +61,8 @@ Dummy.form.get_username
 ```
 
 ## Methods
+
+### Generating form data
 ```ruby
 form
 ```
@@ -78,6 +80,8 @@ form.get_phone_number   # returns a phone number starting 07
 form.get_about_me       # returns a quote for an about me section
 ```
 --------
+
+### Generating credit card data
 ```ruby
 cc
 ```
@@ -91,6 +95,8 @@ cc.get_mastercard_cc_number # returns a random fake Mastercard credit card numbe
 cc.get_mastercard_sec_code  # returns a random fake Mastercard security code
 ```
 --------
+
+### Generating UK postcode data
 ```ruby
 postcode
 ```
