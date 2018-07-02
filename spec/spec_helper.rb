@@ -17,3 +17,42 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+RSpec.describe "Assets used for testing" do
+
+  context "Using the Gem" do
+
+    it "should have a class caled SykGenDataClass" do
+      expect(SykGenDataClass).not_to be nil
+    end
+
+    it "should extend SykGenData" do
+      expect(SykGenDataClass.ancestors).to include SykGenData
+    end
+
+  end
+
+  context "Testing" do
+
+    it "should have a class called Testing" do
+      expect(Testing).not_to be nil
+    end
+
+    it "should have a method called cc_checksum_mod10 which performs a credit card mod 10 calculation check" do
+      expect( Testing.cc_checksum_mod10 372535873749620 ).to be false
+      expect( Testing.cc_checksum_mod10 372535873749621 ).to be true
+      expect( Testing.cc_checksum_mod10 372535873749622 ).to be false
+
+      expect( Testing.cc_checksum_mod10 5586267470722047 ).to be false
+      expect( Testing.cc_checksum_mod10 5586267470722048 ).to be true
+      expect( Testing.cc_checksum_mod10 5586267470722049 ).to be false
+
+      expect( Testing.cc_checksum_mod10 4539062140713109 ).to be false
+      expect( Testing.cc_checksum_mod10 4539062140713100 ).to be true
+      expect( Testing.cc_checksum_mod10 4539062140713101 ).to be false
+    end
+
+  end
+
+
+end

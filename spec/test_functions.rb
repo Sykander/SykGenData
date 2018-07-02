@@ -1,6 +1,8 @@
 class Testing
 
   def self.cc_checksum_mod10 cc_number
+    # if number isn't a string yet convert it to a string
+    cc_number = cc_number.to_s
     # converts the number into an array of integers
     cc_num_array = cc_number.split('').map {|x| x.to_i}
     # take the last digit as the check sum and remove it from the array
