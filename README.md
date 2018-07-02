@@ -123,7 +123,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Sykand
 
 ## Publishing
 
-Please, do not publish any versions of this gem.
+This gem is published when pull requests are approved into master.
 
 ## License
 
