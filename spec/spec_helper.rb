@@ -1,6 +1,10 @@
 require "bundler/setup"
 require "SykGenData"
 
+# Adds in some functions for testing
+# Adds in SykGenData in an extended class SykGenDataClass
+require_relative './test_functions'
+
 RSpec.configure do |config|
 
   # Enable flags like --only-failures and --next-failure

@@ -31,6 +31,8 @@ require 'SykGenData'
 to your ruby file and then adding
 ```ruby
 include SykGenData
+or
+extend SykGenData
 ```
 to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
 
@@ -44,6 +46,16 @@ end
 ...
 dummy = Dummy.new
 dummy.form.get_username
+```
+or
+```ruby
+require 'SykGenData'
+...
+class Dummy
+  extend SykGenData
+end
+...
+Dummy.form.get_username
 ```
 
 ## Methods
