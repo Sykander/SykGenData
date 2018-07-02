@@ -4,7 +4,7 @@ This project was to make a ruby gem which came with a library of useful data gen
 
 These generators could be added to later as I find the need for different types of data. Making these generators into a gem means that I can easily include and use my generators in new projects without much hassle of copying files, making require statements etc.
 
-The generators themselves come in a SOM model with a super module handing out appropriate generator services.
+The generators themselves come in a Service Object Model with a super module handing out appropriate generator services.
 
 ## Installation
 
