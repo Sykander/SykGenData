@@ -71,6 +71,10 @@ to call the GenCCData class used to generate data for filling in online payment 
 ```ruby
 cc.get_visa_cc_number # returns a random fake VISA credit card number
 cc.get_visa_sec_code  # returns a random fake VISA security code
+cc.get_amex_cc_number # returns a random fake American Express credit card number
+cc.get_amex_sec_code  # returns a random fake American Express security code
+cc.get_mastercard_cc_number # returns a random fake Mastercard credit card number
+cc.get_mastercard_sec_code  # returns a random fake Mastercard security code
 ```
 --------
 ```ruby
