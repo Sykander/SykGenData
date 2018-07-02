@@ -131,4 +131,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## RubyGems
 
-[SykGenData](rubygems.org/gems/SykGenData)
+[SykGenData](www.rubygems.org/gems/SykGenData)
