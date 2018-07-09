@@ -1,12 +1,5 @@
 RSpec.describe SykGenData do
 
-  before(:all) do
-    class Dummy
-      include SykGenData
-    end
-    @gen = Dummy.new
-  end
-
   it "should have a version number" do
     expect(SykGenData::VERSION).not_to be nil
   end

@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "SykGenData"
   spec.version       = SykGenData::VERSION
   spec.authors       = ["Sykander"]
-  spec.email         = ["sgul@spartaglobal.com"]
+  spec.email         = ["sgul@spartaglobal.com", "scanda@live.co.uk"]
 
   spec.summary       = "Data Generators."
-  spec.description   = "A collection of Data generators for use with online forms and APIs."
+  spec.description   = "A collection of Data generators for use with online forms and checkouts."
   spec.homepage      = "https://github.com/Sykander/SykGenData"
   spec.license       = "MIT"
 

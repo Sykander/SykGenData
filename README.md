@@ -28,81 +28,56 @@ Use the generators by first adding
 ```ruby
 require 'SykGenData'
 ```
-to your ruby file and then adding
+to your ruby file and then calling SykGenData to return a generator class
 ```ruby
-include SykGenData
-```
-or
-```ruby
-extend SykGenData
-```
-to your Generator Super class if you have one or to any class you'd like to generate data in otherwise.
-
-Eg.
-```ruby
-require 'SykGenData'
-...
-class Dummy
-  include SykGenData
-end
-...
-dummy = Dummy.new
-dummy.form.get_username
-```
-or
-```ruby
-require 'SykGenData'
-...
-class Dummy
-  extend SykGenData
-end
-...
-Dummy.form.get_username
+@form      = SykGenData.form
+@cc        = SykGenDataClass.cc
+@postcode  = SykGenData.postcode
 ```
 
 ## Methods
 
 ### Generating form data
 ```ruby
-form
+@form = SykGenData.form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
 ```ruby
-form.get_country        # returns a country
-form.get_fake_location  # returns a fictional location
-form.get_first_name     # returns a first name
-form.get_last_name      # returns a last name
-form.get_username       # returns a username
-form.get_email          # returns a random email
-form.get_password       # returns a string with upper and lower case as well as special characters and numbers
-form.get_dob            # returns a date of birth as an array of 3 values
-form.get_phone_number   # returns a phone number starting 07
-form.get_about_me       # returns a quote for an about me section
+@form.get_country        # returns a country
+@form.get_fake_location  # returns a fictional location
+@form.get_first_name     # returns a first name
+@form.get_last_name      # returns a last name
+@form.get_username       # returns a username
+@form.get_email          # returns a random email
+@form.get_password       # returns a string with upper and lower case as well as special characters and numbers
+@form.get_dob            # returns a date of birth as an array of 3 values
+@form.get_phone_number   # returns a phone number starting 07
+@form.get_about_me       # returns a quote for an about me section
 ```
 --------
 
 ### Generating credit card data
 ```ruby
-cc
+@cc = SykGenData.cc
 ```
 to call the GenCCData class used to generate data for filling in online payment forms
 ```ruby
-cc.get_visa_cc_number # returns a random fake VISA credit card number
-cc.get_visa_sec_code  # returns a random fake VISA security code
-cc.get_amex_cc_number # returns a random fake American Express credit card number
-cc.get_amex_sec_code  # returns a random fake American Express security code
-cc.get_mastercard_cc_number # returns a random fake Mastercard credit card number
-cc.get_mastercard_sec_code  # returns a random fake Mastercard security code
+@cc.get_visa_cc_number # returns a random fake VISA credit card number
+@cc.get_visa_sec_code  # returns a random fake VISA security code
+@cc.get_amex_cc_number # returns a random fake American Express credit card number
+@cc.get_amex_sec_code  # returns a random fake American Express security code
+@cc.get_mastercard_cc_number # returns a random fake Mastercard credit card number
+@cc.get_mastercard_sec_code  # returns a random fake Mastercard security code
 ```
 --------
 
 ### Generating UK postcode data
 ```ruby
-postcode
+@postcode = SykGenData.psotcode
 ```
 to call GenPostcodeData class used to generate UK postcodes for use with an API.
 ```ruby
-postcode.get_postcode   # returns a random UK postcode
+@postcode.get_postcode   # returns a random UK postcode
 ```
 ## Testing
 

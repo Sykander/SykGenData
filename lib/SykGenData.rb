@@ -3,16 +3,16 @@ require 'SykGenData/generators/gen_form_data'
 require 'SykGenData/generators/gen_postcode_data'
 require 'SykGenData/generators/gen_cc_data'
 
-module SykGenData
-  def form
+class SykGenData
+  def self.form
     GenFormData.new
   end
 
-  def postcode
+  def self.postcode
     GenPostcodeData.new
   end
 
-  def cc
+  def self.cc
     GenCCData.new
   end
 end
