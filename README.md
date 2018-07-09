@@ -31,7 +31,7 @@ require 'SykGenData'
 to your ruby file and then calling SykGenData to return a generator class
 ```ruby
 @form      = SykGenData::form
-@cc        = SykGenDataClass::cc
+@cc        = SykGenData::cc
 @postcode  = SykGenData::postcode
 ```
 
