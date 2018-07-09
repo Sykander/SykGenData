@@ -3,7 +3,7 @@ require 'SykGenData/generators/gen_form_data'
 require 'SykGenData/generators/gen_postcode_data'
 require 'SykGenData/generators/gen_cc_data'
 
-class SykGenData
+module SykGenData
   def self.form
     GenFormData.new
   end

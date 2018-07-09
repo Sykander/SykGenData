@@ -5,14 +5,14 @@ RSpec.describe SykGenData do
   end
 
   it "should give a class instance for form data" do
-    expect(@gen.form.class).to eq GenFormData
+    expect(SykGenData::form.class).to eq GenFormData
   end
 
   it "should give a class instance for postcode data" do
-    expect(@gen.postcode.class).to eq GenPostcodeData
+    expect(SykGenData::postcode.class).to eq GenPostcodeData
   end
 
   it "should give a class instance of cc data" do
-    expect(@gen.cc.class).to eq GenCCData
+    expect(SykGenData::cc.class).to eq GenCCData
   end
 end

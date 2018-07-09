@@ -22,9 +22,8 @@ RSpec.describe "Assets used for testing" do
 
   context "Using the Gem" do
 
-    it "should have a class caled SykGenData" do
+    it "should have a module caled SykGenData" do
       expect(SykGenData).not_to be nil
-      expect(SykGenData.class).to be SykGenData
     end
 
   end

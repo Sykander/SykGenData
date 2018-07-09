@@ -1,7 +1,7 @@
 RSpec.describe "Generate CC data for testing online payment forms" do
 
   before(:all) do
-    @cc = SykGenData.cc
+    @cc = SykGenData::cc
   end
 
   it "should return a visa cc number" do

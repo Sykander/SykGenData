@@ -30,16 +30,16 @@ require 'SykGenData'
 ```
 to your ruby file and then calling SykGenData to return a generator class
 ```ruby
-@form      = SykGenData.form
-@cc        = SykGenDataClass.cc
-@postcode  = SykGenData.postcode
+@form      = SykGenData::form
+@cc        = SykGenDataClass::cc
+@postcode  = SykGenData::postcode
 ```
 
 ## Methods
 
 ### Generating form data
 ```ruby
-@form = SykGenData.form
+@form = SykGenData::form
 ```
 to call the GenFormData class used to generate data for filling in online registration forms.
 ```ruby
@@ -58,7 +58,7 @@ to call the GenFormData class used to generate data for filling in online regist
 
 ### Generating credit card data
 ```ruby
-@cc = SykGenData.cc
+@cc = SykGenData::cc
 ```
 to call the GenCCData class used to generate data for filling in online payment forms
 ```ruby
@@ -73,7 +73,7 @@ to call the GenCCData class used to generate data for filling in online payment 
 
 ### Generating UK postcode data
 ```ruby
-@postcode = SykGenData.psotcode
+@postcode = SykGenData::postcode
 ```
 to call GenPostcodeData class used to generate UK postcodes for use with an API.
 ```ruby

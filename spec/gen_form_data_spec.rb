@@ -1,7 +1,7 @@
 RSpec.describe 'Generate Form data for online registration forms' do
 
   before(:all) do
-    @form = SykGenData.form
+    @form = SykGenData::form
   end
 
   it "should get a random country name" do
