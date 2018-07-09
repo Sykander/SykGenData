@@ -1,7 +1,6 @@
 require 'faker'
 
 class GenFormData
-  include Faker
 
   def get_country
     countries = ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Greenland","Grenada","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Japan","Jordan","Kazakhstan","Kenya","Kiribati","North Korea","South Korea","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","Norway","Northern Mariana Islands","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia", "Saint Vincent and the Grenadines","Samoa","San Marino", "Sao Tome and Principe","Saudi Arabia","Senegal","Serbia and Montenegro","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Sudan","Sudan, South","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands, British","Virgin Islands, U.S.","Yemen","Zambia","Zimbabwe"]
@@ -10,37 +9,21 @@ class GenFormData
   end
 
   def get_fake_location
-    location = [RickAndMorty.location, Simpsons.location, StarTrek.location, StarWars.planet, Zelda.location, Witcher.location, Lovecraft.location, HarryPotter.location, HitchhikersGuideToTheGalaxy.location, HitchhikersGuideToTheGalaxy.planet, HitchhikersGuideToTheGalaxy.starship]
+    location = [Faker::RickAndMorty.location, Faker::Simpsons.location, Faker::StarTrek.location, Faker::StarWars.planet, Faker::Zelda.location, Faker::Witcher.location, Faker::Lovecraft.location, Faker::HarryPotter.location, Faker::HitchhikersGuideToTheGalaxy.location, Faker::HitchhikersGuideToTheGalaxy.planet, Faker::HitchhikersGuideToTheGalaxy.starship]
 
     location.sample
   end
 
   def get_first_name
-    Name.first_name
+    Faker::Name.first_name
   end
 
   def get_last_name
-    Name.last_name
+    Faker::Name.last_name
   end
 
   def get_dob min_years_old, max_years_old
-    Date.birthday(min_years_old, max_years_old).to_s.split('-').map {|x| x.to_i}
-  end
-
-  def get_visa_cc_number
-    cc_number = '4'
-    while cc_number.length < 16
-      cc_number += rand(0..9).to_s
-    end
-    cc_number
-  end
-
-  def get_visa_sec_code
-    sec_code = ''
-    while sec_code.length < 3
-      sec_code += rand(0..9).to_s
-    end
-    sec_code
+    Faker::Date.birthday(min_years_old, max_years_old).to_s.split('-').map {|x| x.to_i}
   end
 
   def get_marital_status
@@ -74,7 +57,7 @@ class GenFormData
   end
 
   def get_username
-    characters = [Ancient.god, Ancient.primordial, Ancient.titan, Ancient.hero, DragonBall.character, Artist.name, BackToTheFuture.character, Book.genre, DrWho.character, DrWho.villian, DrWho.specie, HarryPotter.character, LordOfTheRings.character, Lovecraft.deity, RickAndMorty.character, Seinfeld.character, Simpsons.character, StarTrek.character, StarTrek.villain, StarWars.character, TheFreshPrinceOfBelAir.character, Superhero.descriptor]
+    characters = [Faker::Ancient.god, Faker::Ancient.primordial, Faker::Ancient.titan, Faker::Ancient.hero, Faker::DragonBall.character, Faker::Artist.name, Faker::BackToTheFuture.character, Faker::Book.genre, Faker::DrWho.character, Faker::DrWho.villian, Faker::DrWho.specie, Faker::HarryPotter.character, Faker::LordOfTheRings.character, Faker::Lovecraft.deity, Faker::RickAndMorty.character, Faker::Seinfeld.character, Faker::Simpsons.character, Faker::StarTrek.character, Faker::StarTrek.villain, Faker::StarWars.character, Faker::TheFreshPrinceOfBelAir.character, Faker::Superhero.descriptor]
 
     username = characters.sample
     username += Random.new.rand(0..9).to_s
@@ -96,16 +79,16 @@ class GenFormData
   end
 
   def get_about_me
-    quotes = [BackToTheFuture.quote, Friends.quote, HarryPotter.quote, GameOfThrones.quote, Lovecraft.fhtagn(3), Lovecraft.paragraph, RickAndMorty.quote, Seinfeld.quote, Simpsons.quote, StarWars.quote, StarWars.wookiee_sentence, TheFreshPrinceOfBelAir.quote, HitchhikersGuideToTheGalaxy.marvin_quote]
+    quotes = [Faker::BackToTheFuture.quote, Faker::Friends.quote, Faker::HarryPotter.quote, Faker::GameOfThrones.quote, Faker::Lovecraft.fhtagn(3), Faker::Lovecraft.paragraph, Faker::RickAndMorty.quote, Faker::Seinfeld.quote, Faker::Simpsons.quote, Faker::StarWars.quote, Faker::StarWars.wookiee_sentence, Faker::TheFreshPrinceOfBelAir.quote, Faker::HitchhikersGuideToTheGalaxy.marvin_quote]
     quotes.sample
   end
 
   def get_password
-    Internet.password(8, 16, true, true)
+    Faker::Internet.password(8, 16, true, true)
   end
 
   def get_long_password
-    Internet.password(64, 128, true, true)
+    Faker::Internet.password(64, 128, true, true)
   end
 
   def get_numeric_string
@@ -118,6 +101,6 @@ class GenFormData
   end
 
   def get_email
-    Internet.free_email
+    Faker::Internet.free_email
   end
 end

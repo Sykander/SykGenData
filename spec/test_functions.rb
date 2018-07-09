@@ -32,7 +32,3 @@ class Testing
   end
 
 end
-
-class SykGenDataClass
-  extend SykGenData
-end
